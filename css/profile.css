@@ -1,0 +1,172 @@
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+}
+
+.column {
+  width: 100%;
+  height: 25%;
+  padding: 0 4px;
+  display: flex;
+  position: relative;
+  flex: 25%;
+  margin-top: 50px;
+}
+
+h3{
+  flex: 15%;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  font-size: 1.1em;
+  opacity: 1;
+}
+
+h3:before{
+  content: "";
+  width: 15%;
+  height: 0.6em;
+  left: 0;
+  top: .95em;
+  position: absolute;
+  background-color: var(--color-2);
+  z-index: -1;
+}
+
+.onHover h4{
+  text-align: center;
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+
+.onHover:hover > h4{
+  opacity: 1;
+}
+
+p{
+  text-align: justify;
+}
+
+a{
+  color: var(--color-2);
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  flex: 85%;
+  text-align:left;
+  position: relative;
+}
+
+.content img{
+  width: auto;
+  height: 30%;
+}
+
+.content-flex{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.child-content-flex{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.child-content-flex > div{
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.text-vertical{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+  align-items: center;
+}
+
+@media screen and (min-width:1230px) {
+
+  .column:after{
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    width: 150px;
+    height: 3px;
+    background-color: var(--color-3);
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 1230px){
+
+  .column{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .content-flex > div{
+    width: 100%;
+  }
+  
+  h4{
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  h3{
+    flex: 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .mobile-column{
+    flex-direction: column;
+  }
+
+  .mobile-row{
+    flex-direction: row;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .child-content-flex{
+    height: calc(100%/3);
+  }
+
+  .content img {
+    width: auto;
+    height: 20%;
+  }
+}

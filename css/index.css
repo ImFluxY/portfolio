@@ -1,0 +1,88 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36%;
+}
+
+#menu{
+    display: flex;
+    width: 64%;
+    height: 100vh;
+}
+
+
+#menu h2{
+    font-size: 5em;
+    font-weight: lighter;
+    color: var(--color-1);
+}
+
+.menu-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% / 3);
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    transition: all .15s ease;
+}
+
+.menu-card:hover{
+    width: 60%;
+}
+
+.text-vertical{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+#profile-card{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/menu/profile.jpg");
+}
+
+#gallery-card{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/menu/galerie.jpg");
+}
+
+#contact-card{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/menu/contact.jpg");
+}
+
+.menu-btn{
+    display: none;
+}
+  
+.menu-burger{
+    display: none;
+}
+
+@media screen and (max-width: 1230px) {
+
+    .menu-btn{
+        display: flex;
+    }
+
+    .menu-burger{
+        display: flex;
+    }    
+
+    #menu{
+        display: none;
+    }
+
+    #welcome{
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+h1{
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+table{
+  border-collapse: collapse;
+  min-width: 900px;
+  width: auto;
+  margin: 100px auto;
+  border: 1px solid var(--color-6);
+}
+
+thead tr{
+  background-color: var(--color-2);
+  color: var(--color-1);
+  text-align: left;
+}
+
+th, td{
+  padding: 15px 20px;
+}
+
+tbody, tr, td, th{
+  border: 1px solid var(--color-3);
+}
+
+tbody tr:nth-child(even){
+  background-color: var(--color-6);
+}
+
+tbody tr:last-of-type{
+  border-bottom: 2px solid var(--color-2);
+}

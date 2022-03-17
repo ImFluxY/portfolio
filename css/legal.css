@@ -1,0 +1,30 @@
+html, body{
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+h2{
+  margin: 20px;
+}
+
+p{
+  text-align: justify;
+}
+
+.container-legals{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+article{
+  width: 60%;
+  align-self: center;
+}
+
+.social-media{
+  position: relative;
+  text-align: center;
+}
